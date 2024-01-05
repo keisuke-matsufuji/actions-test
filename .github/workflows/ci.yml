@@ -12,7 +12,7 @@ jobs:
         with:
           ruby-version: 3.2.0
       - name: steep check
-        uses: keisuke-matsufuji/php-error-reporting-derective-visualize@latest
+        uses: keisuke-matsufuji/php-error-reporting-derective-visualize@v1
         env:
           # repo scope な token であれば OK です。
           # GitHub Actions ではデフォルトで `GITHUB_TOKEN` という Secret があるので
