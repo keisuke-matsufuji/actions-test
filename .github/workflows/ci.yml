@@ -1,0 +1,20 @@
+name: CI
+on:
+  - pull_request
+jobs:
+  steep:
+    name: runner / steep
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.2.0
+      - name: steep check
+        uses: keisuke-matsufuji/php-error-reporting-derective-visualize@latest
+        env:
+          # repo scope な token であれば OK です。
+          # GitHub Actions ではデフォルトで `GITHUB_TOKEN` という Secret があるので
+          # これを利用しても構いません
+          REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
