@@ -3,13 +3,13 @@ on:
   - pull_request
 jobs:
   steep:
-    name: runner / steep
+    name: php error-reporting-directive visualize
     runs-on: ubuntu-latest
     steps:
       - name: Check out code
         uses: actions/checkout@v3
       - name: check
-        uses: keisuke-matsufuji/php-error-reporting-derective-visualize@main
+        uses: keisuke-matsufuji/php-error-reporting-directive-visualize@main
         env:
           # repo scope な token であれば OK です。
           # GitHub Actions ではデフォルトで `GITHUB_TOKEN` という Secret があるので
