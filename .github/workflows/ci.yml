@@ -11,7 +11,7 @@ jobs:
       - name: check
         uses: keisuke-matsufuji/php-error-reporting-directive-visualize@main
         env:
-          # repo scope な token であれば OK です。
-          # GitHub Actions ではデフォルトで `GITHUB_TOKEN` という Secret があるので
-          # これを利用しても構いません
+          # A token with repo scope is OK.
+          # In GitHub Actions, there is a default Secret called `GITHUB_TOKEN`
+          # You can use this if you like
           REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
