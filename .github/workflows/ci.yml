@@ -8,10 +8,7 @@ jobs:
     steps:
       - name: Check out code
         uses: actions/checkout@v3
-      - uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 3.2.0
-      - name: steep check
+      - name: check
         uses: keisuke-matsufuji/php-error-reporting-derective-visualize@v1
         env:
           # repo scope な token であれば OK です。
