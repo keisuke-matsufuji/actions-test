@@ -8,6 +8,8 @@ jobs:
     steps:
       - name: Check out code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # 全履歴を取得する
       - name: check
         uses: keisuke-matsufuji/php-error-reporting-derective-visualize@main
         env:
