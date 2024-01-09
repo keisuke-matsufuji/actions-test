@@ -1,4 +1,4 @@
 php_value short_open_tag off
 php_flag  mbstring.encoding_translation Off
 php_value error_reporting 8
-php_value error_reporting 9
+php_value error_reporting 6135
